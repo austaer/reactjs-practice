@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="js/react.min.js"></script>
+        <script src="js/react-dom.min.js"></script>
+    </head>
+
+    
+    <body>
+        <div id="content"></div>
+        
+        <script>
+            class HelloMessage extends React.Component {
+              render() {
+                return React.createElement(
+                    "div", 
+                    {id: "message"},
+                    "Hello",
+                    this.props.name
+                );
+              }
+            }
+
+            ReactDOM.render(
+                React.createElement(HelloMessage, {name: "Jane"}), document.querySelector('#content')
+            );
+        </script>
+    </body>
+</html>
